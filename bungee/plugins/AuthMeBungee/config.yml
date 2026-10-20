@@ -1,0 +1,26 @@
+authServers:
+  - lobby
+allServersAreAuthServers: false
+commands:
+  requireAuth: true
+  whitelist:
+    - /login
+    - /register
+    - /l
+    - /reg
+    - /email
+    - /captcha
+    - /2fa
+    - /totp
+    - /log
+chatRequiresAuth: true
+serverSwitch:
+  requiresAuth: true
+  kickMessage: Authentication required.
+autoLogin: false
+sendOnLogout: false
+unloggedUserServer: ''
+loginServer: ''
+proxySharedSecret: 80ca25a7a38d2c9419a145ed427b1d09418876931e3dcbe707a5519c796d3fbb
+premium:
+  keepOfflineUuidCompatibility: false

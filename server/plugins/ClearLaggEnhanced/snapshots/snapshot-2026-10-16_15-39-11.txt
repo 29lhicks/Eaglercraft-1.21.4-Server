@@ -1,0 +1,26 @@
+ClearLaggEnhanced Lag Snapshot
+==============================
+Time: Fri Oct 16 15:39:11 UTC 2026
+TPS: 16.33
+Memory: 1311MB / 1986MB (66.02%)
+Total Entities: 5
+Online Players: 0
+
+Top 10 Laggy Chunks:
+-------------------
+Chunk [-2, 1]: 2 entities
+Chunk [2, 0]: 2 entities
+Chunk [-2, -1]: 1 entities
+Chunk [0, 0]: 0 entities
+Chunk [2, -2]: 0 entities
+Chunk [0, -1]: 0 entities
+Chunk [0, 1]: 0 entities
+Chunk [0, -2]: 0 entities
+Chunk [0, 2]: 0 entities
+Chunk [-2, 2]: 0 entities
+
+Entity Breakdown (Approximate):
+------------------------------
+ITEM: 2
+SHEEP: 2
+ENDERMAN: 1

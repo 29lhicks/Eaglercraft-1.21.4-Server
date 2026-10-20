@@ -1,0 +1,45 @@
+ClearLaggEnhanced Lag Snapshot
+==============================
+Time: Thu Oct 15 22:21:02 UTC 2026
+TPS: 16.35
+Memory: 1107MB / 1986MB (55.74%)
+Total Entities: 318
+Online Players: 1
+
+Top 10 Laggy Chunks:
+-------------------
+Chunk [-141, -90]: 37 entities
+Chunk [-160, -101]: 31 entities
+Chunk [-149, -100]: 10 entities
+Chunk [-154, -108]: 6 entities
+Chunk [-150, -102]: 6 entities
+Chunk [-142, -90]: 6 entities
+Chunk [-149, -99]: 6 entities
+Chunk [-148, -101]: 5 entities
+Chunk [-151, -92]: 5 entities
+Chunk [-143, -110]: 5 entities
+
+Entity Breakdown (Approximate):
+------------------------------
+FALLING_BLOCK: 84
+SHEEP: 39
+SKELETON: 33
+ZOMBIE: 25
+CREEPER: 19
+SALMON: 18
+COW: 17
+BAT: 17
+CHICKEN: 15
+CHEST_MINECART: 14
+DROWNED: 9
+PIG: 8
+SPIDER: 8
+ITEM: 7
+GLOW_SQUID: 7
+SQUID: 6
+BEE: 2
+ARMADILLO: 2
+PLAYER: 1
+WOLF: 1
+ENDERMAN: 1
+OAK_BOAT: 1

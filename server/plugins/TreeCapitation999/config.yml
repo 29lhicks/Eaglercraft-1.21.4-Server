@@ -1,0 +1,71 @@
+break-leaves: true
+require-axe: true
+drop-as-one: true
+auto-replant: false
+max-tree-blocks: 120
+max-break-distance: 50
+max-leaves-break: 100
+leaf-detection-radius: 3
+sneak-to-fell: false
+durability-multiplier: 1.0
+
+cooldown:
+  enabled: true
+  duration: 5
+
+tools:
+  enabled: true
+  mode: whitelist
+  list:
+    - WOODEN_AXE
+    - STONE_AXE
+    - IRON_AXE
+    - GOLDEN_AXE
+    - DIAMOND_AXE
+    - NETHERITE_AXE
+
+sounds:
+  enabled: true
+  break-sound: BLOCK_WOOD_BREAK
+  volume: 1.0
+  pitch: 1.0
+
+effects:
+  enabled: true
+  break-effect: BLOCK_CRACK
+  particle-data: OAK_LOG
+  particle-count: 20
+
+custom-drops:
+  enabled: false
+  drops: []
+
+smart-tree-recognition:
+  enabled: false
+  min-trunk-height: 2
+  max-branch-length: 3
+
+cascading-break:
+  enabled: false
+  delay: 2
+
+felling-direction:
+  enabled: false
+  mode: look
+
+enchantment-integration:
+  enabled: true
+
+protections:
+  worldguard: true
+  griefprevention: true
+  lands: true
+  towny: true
+  plotsquared: true
+
+tree-overrides: {}
+
+per-world-settings: {}
+
+modded-wood-materials: []
+modded-leaf-materials: []

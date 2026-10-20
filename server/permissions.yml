@@ -1,0 +1,43 @@
+permissions:
+  huskhomes.command.sethome:
+    description: Allow every player to set homes
+    default: true
+  huskhomes.command.home:
+    description: Allow every player to teleport to their homes
+    default: true
+  huskhomes.max_homes.3:
+    description: Limit every player to three homes
+    default: true
+  essentials.home:
+    description: Allow all players to teleport to their homes
+    default: true
+  essentials.sethome:
+    description: Allow all players to set homes
+    default: true
+  essentials.delhome:
+    description: Allow all players to delete their homes
+    default: true
+  essentials.sethome.multiple:
+    description: Allow all players to set up to three homes
+    default: true
+  essentials.balance:
+    description: Allow players to check their own balance
+    default: true
+  essentials.pay:
+    description: Allow players to pay other players
+    default: true
+  essentials.balancetop:
+    description: Allow players to view the richest players
+    default: true
+  essentials.help:
+    description: Allow all players to use the EssentialsX help command
+    default: true
+  bukkit.command.help:
+    description: Allow all players to use the Bukkit help command
+    default: true
+  magic.wand.use:
+    description: Allow all players to use Magic wands
+    default: true
+  magic.commands.spells:
+    description: Allow all players to browse Magic spells
+    default: true

@@ -1,0 +1,55 @@
+# ============================================================================ #
+#                       ClearLaggEnhanced Configuration                        #
+# ============================================================================ #
+# This is the main configuration file that controls which modules are enabled.
+# Module-specific settings live in resources/module/<module-name>/config.yml.
+# Legacy per-module enabled keys are ignored at runtime.
+
+# ---------------------------------------------------------------------------- #
+#                             Database Settings                                #
+# ---------------------------------------------------------------------------- #
+# Supports SQLite and MySQL.
+# database.file is used only when database.type=sqlite.
+# database.mysql.* is used only when database.type=mysql.
+# Switching database.type changes where data is stored, but does not migrate existing data.
+database:
+  enabled: true
+  type: "sqlite"
+  file: "clearlagg.db"
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "clearlagg"
+    username: "root"
+    password: "password"
+    ssl-mode: "PREFERRED"
+    properties: {}
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 2
+    connection-timeout-ms: 10000
+    idle-timeout-ms: 600000
+    max-lifetime-ms: 1800000
+    keepalive-time-ms: 0
+    validation-timeout-ms: 5000
+
+# ---------------------------------------------------------------------------- #
+#                               Module System                                  #
+# ---------------------------------------------------------------------------- #
+# config.yml is the only runtime source of truth for module enable/disable state.
+# Legacy module/<module-name>/config.yml enabled keys remain on disk for compatibility only.
+modules:
+  entity-clearing: true
+  mob-limiter: true
+  spawner-limiter: true
+  misc-entity-limiter: true
+  chunk-finder: true
+  performance: true
+  packet-limiter: false
+  afk: false
+
+  # 3rd Party Plugins
+  wildstacker: false
+  rosestacker: false
+  modernshowcase: false
+  griefprevention3d: false

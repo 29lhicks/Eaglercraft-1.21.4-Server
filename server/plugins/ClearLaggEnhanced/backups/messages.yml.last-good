@@ -1,0 +1,146 @@
+# ============================================================================ #
+#                        ClearLaggEnhanced Messages                            #
+# ============================================================================ #
+# Supports MiniMessage format: https://docs.advntr.dev/minimessage/format.html
+
+# ---------------------------------------------------------------------------- #
+#                               Global Prefix                                  #
+# ---------------------------------------------------------------------------- #
+prefix: "<gray>[</gray><gold>ClearLagg</gold><gray>]</gray>"
+
+# ---------------------------------------------------------------------------- #
+#                           General Notifications                              #
+# ---------------------------------------------------------------------------- #
+notifications:
+  no-permission: "<red>✗</red> <red>You don't have permission to use this command.</red>"
+  reload-complete: "<green>✓</green> <green>Configuration reloaded successfully!</green>"
+  reload-failed: "<red>✗</red> <red>Reload failed:</red> <white>{reason}</white>"
+
+  # --- Entity Clearing ---
+  clear-complete: "{prefix} <green>✓</green> <green>Cleared <white>{count}</white> entities in <gray>{time}ms</gray></green>"
+
+  # --- Mob Limiter ---
+  limit-reached: "<yellow>⚠</yellow> <yellow>Mob limit reached in chunk <white>[{x}, {z}]</white></yellow>"
+  optimized: "<green>✓</green> <green>Optimized chunk <white>[{x}, {z}]</white> - Removed <white>{count}</white> mobs</green>"
+
+  # --- Spawner Limiter ---
+  delay-increased: "<yellow>⚠</yellow> <yellow>Spawner delay increased in chunk <white>[{x}, {z}]</white></yellow>"
+
+  # --- Misc Entity Limiter ---
+  blocked: "<red>⛔</red> <gray>[<red>MiscLimiter</red>]</gray> <gray>Blocked</gray> <yellow>{type}</yellow> <gray>in chunk</gray> <white>[{x}, {z}]</white>"
+  trimmed: "<gold>✂</gold> <gray>[<gold>MiscLimiter</gold>]</gray> <gray>Trimmed</gray> <yellow>{removed}</yellow> <yellow>{type}</yellow> <gray>in chunk</gray> <white>[{x}, {z}]</white>"
+
+  # --- Packet Limiter ---
+  packet-limiter:
+    admin-notify: "<red>⚠</red> <gray>[<red>PacketLimiter</red>]</gray> <red>Player <white>{player}</white> is sending too many packets! <dark_gray>({pps} PPS, Violation #{violations})</dark_gray>"
+    player-notify: "<red>⚠</red> <red>You are sending too many packets! Please slow down.</red>"
+    kick-message: "<red>Kicked for packet spamming.\n<gray>Please contact an administrator if you believe this is an error.</gray>"
+
+  # --- AFK Optimization ---
+  afk:
+    distance-lowered: "<gray>[</gray><gold>CLE</gold><gray>]</gray> <gray>Your simulation distance has been lowered while AFK.</gray>"
+    distance-restored: "<gray>[</gray><gold>CLE</gold><gray>]</gray> <gray>Your simulation distance has been restored.</gray>"
+
+# ---------------------------------------------------------------------------- #
+#                                 Commands                                     #
+# ---------------------------------------------------------------------------- #
+commands:
+  help:
+    header: "<gold><bold>═══ ClearLaggEnhanced Help ═══</bold></gold>"
+    help: "<gold>▪</gold> <aqua>/lagg help</aqua> <gray>-</gray> <white>Show this help menu</white>"
+    clear: "<gold>▪</gold> <aqua>/lagg clear</aqua> <gray>-</gray> <white>Clear entities now</white>"
+    clearstatus: "<gold>▪</gold> <aqua>/lagg clearstatus</aqua> <gray>-</gray> <white>Show active clear interval status</white>"
+    next: "<gold>▪</gold> <aqua>/lagg next</aqua> <gray>-</gray> <white>Time until next clear</white>"
+    tps: "<gold>▪</gold> <aqua>/lagg tps</aqua> <gray>-</gray> <white>Show server TPS</white>"
+    ram: "<gold>▪</gold> <aqua>/lagg ram</aqua> <gray>-</gray> <white>Show memory usage</white>"
+    chunkfinder: "<gold>▪</gold> <aqua>/lagg chunkfinder</aqua> <gray>-</gray> <white>Find laggy chunks</white>"
+    admin: "<gold>▪</gold> <aqua>/lagg admin</aqua> <gray>-</gray> <white>Open admin panel</white>"
+    reload: "<gold>▪</gold> <aqua>/lagg reload</aqua> <gray>-</gray> <white>Reload configuration</white>"
+  unknown-subcommand: "<red>✗</red> <red>Unknown command: <white>{sub}</white></red>"
+  clear:
+    starting: "<gold>▶</gold> <yellow>Starting manual entity clear...</yellow>"
+    already-in-progress: "<red>✗</red> <red>An entity clearing cycle is already in progress!</red>"
+    cancelled: "<red>✗</red> <red>Another plugin cancelled this entity clear.</red>"
+  clearstatus:
+    header: "<gold><bold>═══ Entity Clear Status ═══</bold></gold>"
+    mode: "<yellow>▪</yellow> <yellow>Mode:</yellow> <white>{mode}</white> <gray>(metric: {metric})</gray>"
+    detected: "<yellow>▪</yellow> <yellow>Detected:</yellow> <white>{value}</white> <gray>{label}</gray>"
+    detected-unavailable: "<yellow>▪</yellow> <yellow>Detected:</yellow> <gray>n/a for fixed interval mode</gray>"
+    current-interval: "<yellow>▪</yellow> <yellow>Current cycle interval:</yellow> <white>{interval}</white> <gray>seconds</gray>"
+    fallback-interval: "<yellow>▪</yellow> <yellow>Fallback interval:</yellow> <white>{interval}</white> <gray>seconds</gray>"
+    performance-gate-header: "<gold>▪</gold> <gold>Performance Gate</gold>"
+    performance-gate-unavailable: "<yellow>▪</yellow> <yellow>Average MSPT is unavailable on this server. The performance gate is not blocking clears.</yellow>"
+    performance-gate-current: "<yellow>▪</yellow> <yellow>Current average MSPT:</yellow> <white>{mspt}</white> <gray>(threshold: {threshold})</gray>"
+    performance-gate-window: "<yellow>▪</yellow> <yellow>Sustained window:</yellow> <white>{current}</white><gray>/</gray><white>{required}</white> <gray>seconds</gray>"
+    performance-gate-blocking: "<yellow>▪</yellow> <yellow>Automatic clearing is currently deferred by the performance gate.</yellow>"
+    performance-gate-open: "<green>▪</green> <green>Performance gate is satisfied. Automatic clearing can proceed.</green>"
+    remaining: "<yellow>▪</yellow> <yellow>Next clear in:</yellow> <white>{time}</white>"
+
+# --- Entity Clearing ---
+warnings:
+  entity-clear: "{prefix} <gold>⚠</gold> <yellow>Entities will be cleared in <white>{seconds}</white> seconds!</yellow>"
+  title: "<gold><bold>Entity Clear Warning</bold></gold>"
+
+next-clear:
+  disabled: "<yellow>⚠</yellow> <yellow>Automatic entity clearing is disabled</yellow>"
+  imminent: "<green>⏰</green> <green>Next clear:</green> <white>Any moment now!</white>"
+  scheduled: "<green>⏰</green> <green>Next automatic clear in:</green> <white>{time}</white>"
+
+# --- Chunk Finder ---
+chunkfinder:
+  scanning: "<aqua>⟳</aqua> <aqua>Scanning for laggy chunks...</aqua>"
+  none-found: "<green>✓</green> <green>No laggy chunks found within <white>{radius}</white> chunks!</green>"
+  header: "<red><bold>═══ Top 10 Laggy Chunks ═══</bold></red>"
+  entry: "<yellow>▪</yellow> <yellow>Chunk [<white>{x}</white>, <white>{z}</white>]</yellow> <gray>-</gray> <gold>{count}</gold> <gray>entities</gray> <dark_gray>({distance} chunks away)</dark_gray>"
+  more: "<gray>... and <yellow>{more}</yellow> more laggy chunks</gray>"
+
+# --- Performance ---
+performance:
+  snapshot-triggered: "<red>⚡</red> <gray>[<red>Performance</red>]</gray> <yellow>Low TPS detected (<white>{tps}</white>). Taking a lag snapshot...</yellow>"
+  snapshot-saved: "<green>✓</green> <gray>[<gold>Performance</gold>]</gray> <gray>Lag snapshot saved to <white>snapshots/{filename}</white></gray>"
+  tps: "<aqua>⚡</aqua> <aqua>Current TPS:</aqua> <white>{tps}</white>"
+  memory: "<aqua>⚡</aqua> <aqua>Memory:</aqua> <white>{usage}</white> <gray>({percentage}%)</gray>"
+  ram:
+    header: "<gold><bold>═══ RAM Usage ═══</bold></gold>"
+    used: "<green>▪</green> <green>Used:</green> <white>{used}</white> <gray>MB</gray> <yellow>({percent}%)</yellow>"
+    total: "<aqua>▪</aqua> <aqua>Total:</aqua> <white>{total}</white> <gray>MB</gray>"
+    max: "<gold>▪</gold> <gold>Max:</gold> <white>{max}</white> <gray>MB</gray>"
+  entities: "<aqua>⚡</aqua> <aqua>Total Entities:</aqua> <white>{count}</white>"
+
+# ---------------------------------------------------------------------------- #
+#                               GUI Messages                                   #
+# ---------------------------------------------------------------------------- #
+gui:
+  enter-interval: "<aqua>▶</aqua> <aqua>Enter new clearing interval in seconds:</aqua>"
+  enter-value: "<aqua>▶</aqua> <aqua>Enter new value for <yellow>{type}</yellow>:</aqua>"
+  type-cancel: "<gray>Type </gray><yellow>'cancel'</yellow><gray> to cancel.</gray>"
+  input-cancelled: "<yellow>⚠</yellow> <yellow>Input cancelled.</yellow>"
+  interval-min: "<red>✗</red> <red>Interval must be at least <white>{min}</white> seconds!</red>"
+  interval-max: "<red>✗</red> <red>Interval cannot exceed <white>{max}</white> seconds!</red>"
+  interval-set: "<green>✓</green> <green>Entity clearing interval set to <white>{interval}</white> seconds!</green>"
+  enter-adaptive-thresholds: "<aqua>▶</aqua> <aqua>Enter adaptive thresholds as <yellow>threshold:interval</yellow> pairs separated by commas.</aqua>"
+  adaptive-thresholds-format: "<gray>Example:</gray> <white>0:900, 5000:750, 7000:600</white>"
+  adaptive-thresholds-set: "<green>✓</green> <green>Adaptive thresholds updated successfully.</green>"
+  adaptive-thresholds-invalid: "<red>✗</red> <red>Invalid adaptive thresholds:</red> <white>{reason}</white>"
+  adaptive-metric-set: "<green>✓</green> <green>Adaptive metric set to <white>{metric}</white>.</green>"
+  adaptive-enabled-set: "<green>✓</green> <green>Adaptive interval is now <white>{state}</white>.</green>"
+  value-set: "<green>✓</green> <green><white>{type}</white> set to <white>{value}</white>!</green>"
+  invalid-number: "<red>✗</red> <red>Invalid number! Please enter a valid integer.</red>"
+  invalid-double: "<red>✗</red> <red>Invalid number! Please enter a valid decimal number.</red>"
+
+# ---------------------------------------------------------------------------- #
+#                                  Errors                                      #
+# ---------------------------------------------------------------------------- #
+errors:
+  player-only: "<red>✗</red> <red>This command can only be used by players.</red>"
+  message-manager-not-initialized: "<red>✗</red> <red>MessageManager not initialized.</red>"
+
+# ---------------------------------------------------------------------------- #
+#                            Update Notifications                              #
+# ---------------------------------------------------------------------------- #
+update-notifier:
+  - ""
+  - "<yellow>⚠</yellow> <yellow><bold>Update Available!</bold></yellow>"
+  - "<gray>Current:</gray> <red><current_version></red> <gray>→ New:</gray> <green><new_version></green>"
+  - "<aqua><u>» Click to open Modrinth page «</u></aqua>"
+  - ""

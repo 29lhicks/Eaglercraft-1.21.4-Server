@@ -1,0 +1,11 @@
+# Minecraft Server ignore list
+*.log
+*.log.*
+*.lck
+server/world/
+server/world_nether/
+server/world_the_end/
+server/cache/
+server/libraries/
+server/.console_history
+server/usercache.json

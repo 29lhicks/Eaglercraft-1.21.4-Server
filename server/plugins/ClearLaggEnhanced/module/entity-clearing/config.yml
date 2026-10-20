@@ -1,0 +1,124 @@
+# ============================================================================ #
+#                          Entity Clearing Module                              #
+# ============================================================================ #
+# This module handles automated entity clearing based on configured intervals.
+# The module is enabled/disabled in the main config.yml.
+# Be sure to check out the materials list at: https://busybeedev.net/docs/clearlaggenhanced/materials
+
+# Default/fallback time in seconds between clears.
+interval: 300
+
+# Optional adaptive interval scheduling.
+# The interval is re-evaluated at the start of each new clearing cycle.
+# The highest matching threshold wins. If no tier matches, the base interval above is used.
+# Use ENTITY_COUNT to base the interval on the currently loaded entities in the configured worlds.
+# Use PLAYER_COUNT to base the interval on the current online player count.
+adaptive-interval:
+  enabled: false
+  metric: "ENTITY_COUNT" # ENTITY_COUNT | PLAYER_COUNT
+  tiers:
+    - threshold: 0
+      interval: 900
+    - threshold: 5000
+      interval: 750
+    - threshold: 7000
+      interval: 600
+
+# Optional MSPT performance gate.
+# NOTE: This feature is currently NOT supported on Folia due to its regionized architecture.
+# When enabled, automatic clearing is deferred while the server is healthy.
+# Clears are only allowed once the average MSPT has stayed at or above the threshold
+# for the configured sustained duration.
+performance-gate:
+  enabled: true
+  mspt-threshold: 45.0
+  sustained-seconds: 300
+
+protect-named-entities: true
+protect-persistent-named-only: false
+protect-tamed-entities: true
+protect-armored-entities: false
+protect-stacked-entities: false
+whitelist-all-mobs: false
+# Protect all friendly mobs (animals, villagers, golems, fish, bats, etc.) while still
+# clearing hostile ones. Mob limiter spawn caps still apply to them.
+protect-passive-mobs: true
+
+extra-protections:
+  mobs-in-boats: true
+  mobs-in-minecarts: true
+  leashed-mobs: true
+  # Mobs wearing a saddle (horses, pigs, striders, camels...) or a harness (happy ghast).
+  saddled-mobs: true
+  # Mobs with a player riding them.
+  ridden-mobs: true
+  # Fish and axolotls a player released from a bucket.
+  bucket-mobs: true
+  mobs-from-breeding: true
+  modern-showcase: true
+  player-heads: true
+  pets-module: true
+  citizens-support: true
+  mythic-mobs: false
+  infernal-mobs: false
+  grief-prevention-3d: false
+  # Oraxen/Nexo detection is best-effort (checks a guessed PersistentDataContainer
+  # key on the entity) and not verified against those plugins' current internal formats.
+  # Most modern furniture from these plugins uses Display entities, which are already
+  # protected globally via the whitelist above regardless of these toggles.
+  oraxen: false
+  nexo: false
+  # Keeps ItemsAdder furniture and custom entities, asked through ItemsAdder's own API.
+  items-adder: false
+
+  # Protect entities that carry any of these scoreboard tags.
+  # CLE_PROTECTED is always protected, e.g. /tag @e[type=cow,limit=1,sort=nearest] add CLE_PROTECTED
+  protected-entity-tags: []
+
+worlds: []
+
+# Entities that should NOT be cleared.
+# Names from older server versions still work (MINECART_CHEST, MUSHROOM_COW, BOAT, ...).
+# Things that are both a placed entity and an item (ARMOR_STAND, MINECART, TRIDENT, boats, ...)
+# are kept in both forms, whichever of the two lists they are in.
+# If you need help with names BusyBee now has a materials list.
+# Check it out at https://busybeedev.net/docs/clearlaggenhanced/materials
+whitelist:
+  - "VILLAGER"
+  - "ZOMBIE_VILLAGER"
+  - "IRON_GOLEM"
+  - "ARMOR_STAND"
+  - "TEXT_DISPLAY"
+  - "ITEM_DISPLAY"
+  - "BLOCK_DISPLAY"
+  - "ITEM_FRAME"
+  - "GLOW_ITEM_FRAME"
+  - "LEASH_HITCH"
+  - "LEASH_KNOT"
+
+# Items that should NOT be cleared when dropped on the ground.
+item-whitelist:
+  - "NETHERITE_INGOT"
+
+notifications:
+  broadcast-times: [60, 30, 10, 5]
+  types:
+    - "ACTION_BAR"
+  console-notifications: false
+  sound:
+    enabled: true
+    name: "BLOCK_NOTE_BLOCK_PLING"
+    volume: 1.0
+    pitch: 1.2
+
+  # Optional override for the clear-complete message only. Any field omitted
+  # here falls back to the values above.
+  clear-complete:
+    types:
+      - "CHAT"
+    console-notifications: false
+    sound:
+      enabled: true
+      name: "ENTITY_PLAYER_LEVELUP"
+      volume: 1.0
+      pitch: 1.0

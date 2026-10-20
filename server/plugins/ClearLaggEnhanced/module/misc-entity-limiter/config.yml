@@ -1,0 +1,34 @@
+# ============================================================================ #
+#                        Misc Entity Limiter Module                            #
+# ============================================================================ #
+# This module limits non-mob entities like boats, minecarts, and armor stands.
+# The module is enabled/disabled in the main config.yml.
+# Be sure to check out the materials list at: https://busybeedev.net/docs/clearlaggenhanced/materials
+
+limits-per-chunk:
+  ARMOR_STAND: -1
+  BOAT: 5
+  CHEST_BOAT: 5
+  MINECART: 5
+  ITEM_FRAME: -1
+  GLOW_ITEM_FRAME: -1
+  LEASH_HITCH: -1
+  PAINTING: 5
+
+# While the Entity Clearing module is enabled, the sweep also skips everything that module
+# protects (its whitelist, tamed, leashed, bred, claimed mobs, ...). Caps still block new placements.
+protect:
+  named: true
+  citizens: true
+  tags:
+    - "CLE_PROTECTED"
+
+sweep:
+  interval-ticks: 100
+  max-chunks-per-tick: 20
+
+notify:
+  admins-permission: "CLE.admin"
+  throttle-seconds: 60
+
+worlds: []

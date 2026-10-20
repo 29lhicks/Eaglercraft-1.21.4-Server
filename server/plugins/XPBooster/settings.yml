@@ -1,0 +1,65 @@
+# Console will still send notifications out
+notify-updates: true
+
+# Minimum multiplier: the next decimal example 1.5
+minimum-multiplier: 1
+
+# Maximum multiplier
+maximum-multiplier: 15
+
+# Sound played when boost ends
+boost-end-sound: BLOCK_NOTE_BLOCK_PLING
+
+# ROUNDING OPTIONS
+# ROUND - Standard rounding: rounds to the nearest integer.
+#         Example: 2.5 rounds to 3, 2.4 rounds to 2.
+# FLOOR - Always rounds down to the nearest integer.
+#         Example: 2.9 rounds to 2, 2.1 rounds to 2.
+# CEIL  - Always rounds up to the nearest integer.
+#         Example: 2.1 rounds to 3, 2.9 rounds to 3.
+
+rounding: 'ROUND'
+
+# ROUND-NUMBER OPTION
+# If 'rounding' is set to 'ROUND', this specifies the threshold for rounding.
+# Example: if round-number is 0.5:
+#          - 2.5 will round to 3
+#          - 2.4 will round to 2
+# Adjust this value to change the rounding threshold.
+round-decimal: 0.5
+
+# Range the multiplier will use. Keep in mind the multiplier will be rounded because of how Minecraft stores the experience.
+# For example, if set to true, you can have a full range including the decimal point for the multiplier.
+full-range-multiplier: false
+
+# Example a user with xpbooster.multiplier.5 will receive a permanent xp boost of 5
+permission-based-multiplier: false
+
+# Make sure you are using paper spigot for this option
+ignore-xp-bottles: false
+
+# Select the timezone you are in https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+global-boost:
+  enabled: true
+  allow-stacking: false
+  schedule:
+    timezone: "America/Chicago"
+    holidays:
+      Christmas: # both Christmas Eve and Christmas Day combined
+        start-date: "12-25"
+        end-date: "12-26"
+        multiplier: 5
+        notify: "&2🎄 &aMerry Christmas! &7Enjoy a festive &e$multiplier XP Boost!"
+      New-Year:
+        start-date: "12-31"
+        end-date: "01-01"
+        multiplier: 5
+        notify: "&5🎉 &dHappy New Year! &7Kick off the year with a &e$multiplier &7XP Boost!"
+    days-of-week: # 1 to disable
+      Monday: 5
+      Tuesday: 5
+      Wednesday: 5
+      Thursday: 5
+      Friday: 5
+      Saturday: 5
+      Sunday: 5

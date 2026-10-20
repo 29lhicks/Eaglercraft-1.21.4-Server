@@ -1,0 +1,31 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 0:0:0:0:0:0:0:1
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1792424071237
+  login: 1792423923977
+money: '7.5'
+last-account-name: Quadavis_
+logoutlocation:
+  world: 14bba638-10db-4833-b8d9-86e7f86f8283
+  world-name: world
+  x: 59.08622680762131
+  y: 62.187252037997915
+  z: 119.21931504722329
+  yaw: -151.47230529785156
+  pitch: 8.402487754821777

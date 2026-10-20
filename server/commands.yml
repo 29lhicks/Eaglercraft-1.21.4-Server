@@ -1,0 +1,31 @@
+command-block-overrides: []
+ignore-vanilla-permissions: false
+aliases:
+  icanhasbukkit:
+  - version $1-
+  sell:
+  - economyshopgui:sellall $1-
+  guide:
+  - minecraft:tellraw @s {"text":"=== Server Guide ===","color":"gold","bold":true}
+  - 'minecraft:tellraw @s {"text":"Account: /register <password> <password> once,
+    then /login <password>. EssentialsX homes: /sethome [name], /home [name], /delhome
+    [name].","color":"yellow"}'
+  - 'minecraft:tellraw @s {"text":"Travel and money: /spawn, /tpa <player>, /bal,
+    /pay <player> <amount> may depend on your rank. /shop opens the shop; /sell sells
+    items.","color":"yellow"}'
+  - 'minecraft:tellraw @s {"text":"DailyRewards: /daily opens the claim menu. Claim
+    $1,000 + 20 XP levels each day; day 7 includes a $10,000 + 40 XP-level streak
+    bonus. The cycle uses UTC days.","color":"yellow"}'
+  - 'minecraft:tellraw @s {"text":"AuraSkills: /skills. CrazyEnchantments: /ce, /tinkerer,
+    /blacksmith. Magic: craft a wand, right-click to cast, and use /spells to browse
+    spells. Choose your one-time class with /chooseclass <mage|battle_mage|archer_mage|knight|assassin>.","color":"yellow"}'
+  - 'minecraft:tellraw @s {"text":"Class perks: Mage has 50% more mana and 20% shorter
+    spell cooldowns; Knight has permanent Strength I and 10% slower attack speed;
+    Assassin has permanent Speed I and becomes invisible for 20 seconds when crouching.
+    Magic spells and AuraSkills abilities share mana.","color":"yellow"}'
+  - 'minecraft:tellraw @s {"text":"Other plugins: /soulbound has item-protection tools;
+    TreeCapitation, SilkTouchSpawner, SpawnEggDrops, XPBooster, TuffXPlus and RuinedStructures
+    add gameplay features. ViaVersion/ViaBackwards/ViaRewind handle client versions
+    automatically; Vault connects plugins.","color":"yellow"}'
+  - minecraft:tellraw @s {"text":"Use /help for command topics. Some commands need
+    rank permissions; admin/plugin-management commands are not player commands.","color":"gray"}

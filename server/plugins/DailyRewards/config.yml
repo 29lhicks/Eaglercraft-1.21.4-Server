@@ -1,0 +1,88 @@
+timezone: UTC
+remind-on-join: true
+discord:
+  enabled: false
+  webhook-url: ""
+  message: "%player% claimed day %day% of the daily rewards."
+rewards:
+  1:
+    name: "&aDay 1"
+    icon: EMERALD
+    items: []
+    commands:
+      - "eco give %player% 1000"
+      - "experience add %player% 20 levels"
+    lore:
+      - "&7Daily reward: $1,000 + 20 XP levels"
+  2:
+    name: "&aDay 2"
+    icon: EMERALD
+    items: []
+    commands:
+      - "eco give %player% 1000"
+      - "experience add %player% 20 levels"
+    lore:
+      - "&7Daily reward: $1,000 + 20 XP levels"
+  3:
+    name: "&aDay 3"
+    icon: EMERALD
+    items: []
+    commands:
+      - "eco give %player% 1000"
+      - "experience add %player% 20 levels"
+    lore:
+      - "&7Daily reward: $1,000 + 20 XP levels"
+  4:
+    name: "&aDay 4"
+    icon: EMERALD
+    items: []
+    commands:
+      - "eco give %player% 1000"
+      - "experience add %player% 20 levels"
+    lore:
+      - "&7Daily reward: $1,000 + 20 XP levels"
+  5:
+    name: "&aDay 5"
+    icon: EMERALD
+    items: []
+    commands:
+      - "eco give %player% 1000"
+      - "experience add %player% 20 levels"
+    lore:
+      - "&7Daily reward: $1,000 + 20 XP levels"
+  6:
+    name: "&aDay 6"
+    icon: EMERALD
+    items: []
+    commands:
+      - "eco give %player% 1000"
+      - "experience add %player% 20 levels"
+    lore:
+      - "&7Daily reward: $1,000 + 20 XP levels"
+  7:
+    name: "&6&lDay 7 - Weekly Bonus"
+    icon: DIAMOND
+    items: []
+    commands:
+      - "eco give %player% 11000"
+      - "experience add %player% 60 levels"
+    lore:
+      - "&7Daily reward: $1,000 + 20 XP levels"
+      - "&6Seven-day bonus: $10,000 + 40 XP levels"
+messages:
+  prefix: "&6[Daily Rewards] &r"
+  menu-title: "&8Daily Rewards"
+  claimed: "&aYou claimed day %day%'s reward! &7(%day%/%total%)"
+  already-claimed: "&eYou already claimed today's reward. Come back tomorrow."
+  reminder: "&aYour daily reward is ready! Claim it with &e/daily&a."
+  inventory-full: "&cYour inventory is full; overflow items were dropped nearby."
+  players-only: "&cThis command can only be used in-game."
+  reloaded: "&aDaily rewards configuration reloaded."
+  reset: "&aReset the daily reward streak for %player%."
+  unknown-player: "&cNo reward history found for that player."
+  no-permission: "&cYou don't have permission to do that."
+  usage: "&7Usage: /daily [reload | reset <player>]"
+  lore-claimed: "&aClaimed"
+  lore-click: "&eClick to claim!"
+  lore-locked: "&7Locked"
+  lore-item: "&7• %amount%x %item%"
