@@ -1,0 +1,16 @@
+com/customrealms/relics/items/CustomItemDefinition.class
+com/customrealms/relics/structures/VanillaStructureLootListener.class
+com/customrealms/relics/commands/RelicsCommand.class
+com/customrealms/relics/items/CustomItemDefinition$Source.class
+com/customrealms/relics/items/RecipeManager.class
+com/customrealms/relics/RelicsAndRuinsPlugin.class
+com/customrealms/relics/listeners/CombatAndBossListener.class
+com/customrealms/relics/items/CustomItemDefinition$Category.class
+com/customrealms/relics/items/CustomItemRegistry.class
+com/customrealms/relics/listeners/PassiveBuffNerfTask.class
+com/customrealms/relics/network/BungeeNotifier.class
+com/customrealms/relics/listeners/ToolAndInteractListener.class
+com/customrealms/relics/structures/StructureGeneratorListener$1.class
+com/customrealms/relics/items/CustomItemDefinition$AttrEntry.class
+com/customrealms/relics/listeners/EverlastingBakedPotatoListener.class
+com/customrealms/relics/structures/StructureGeneratorListener.class

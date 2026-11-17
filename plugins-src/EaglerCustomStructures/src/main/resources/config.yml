@@ -1,0 +1,3 @@
+# Multiplies each structure type's base per-chunk chance.
+# Raise this to make biome-appropriate structures appear more often.
+spawn-chance-multiplier: 4.0

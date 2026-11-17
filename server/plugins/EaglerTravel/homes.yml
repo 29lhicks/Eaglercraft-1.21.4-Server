@@ -1,0 +1,19 @@
+homes:
+  a5150579-19ee-346e-9e52-ab4961349e5b:
+    home:
+      world: world
+      world-uuid: a10afb4f-d76d-4a11-88c0-061a7afd3079
+      x: 32.300000011920936
+      y: 24.0
+      z: -331.3957706048815
+      yaw: -55.24693
+      pitch: -19.255754
+  85de91e0-5efd-32e6-94d2-771371943e91:
+    home:
+      world: world
+      world-uuid: a10afb4f-d76d-4a11-88c0-061a7afd3079
+      x: -574.5185688293702
+      y: 61.0
+      z: 919.0287363743367
+      yaw: 3.1461182
+      pitch: 18.750011

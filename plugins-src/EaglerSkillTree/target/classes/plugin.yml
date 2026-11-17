@@ -1,0 +1,23 @@
+name: EaglerSkillTree
+version: 1.0.0
+main: com.eagler.skills.EaglerSkillTree
+api-version: '1.21.4'
+softdepend: [EaglerCustomGear, EaglerBossesAndBook, EaglerCustomEnchants]
+description: Interactive 3-Branch RPG Skill Tree GUI earned via Level 40 EXP milestones or killing World Bosses.
+commands:
+  skills:
+    description: Opens the interactive RPG Skill Tree GUI.
+    usage: /skills
+    aliases: [skilltree, st]
+    permission: eaglerskills.use
+  skadmin:
+    description: Admin command to grant or reset skill points.
+    usage: /skadmin <give|reset> <player> [amount]
+    permission: eaglerskills.admin
+permissions:
+  eaglerskills.use:
+    description: Allows opening and upgrading the skill tree.
+    default: true
+  eaglerskills.admin:
+    description: Allows managing player skill points.
+    default: op

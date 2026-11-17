@@ -1,0 +1,22 @@
+name: EaglerCustomGear
+version: 1.0.0
+main: com.eagler.gear.EaglerCustomGear
+api-version: '1.21.4'
+softdepend: [EaglerCustomEnchants]
+description: Custom gear, boss and relic crafting recipes in one interactive 3x3 recipe GUI.
+commands:
+  recipes:
+    description: Opens the interactive 3x3 Artisan Crafting Recipe GUI.
+    usage: /recipes
+    aliases: [recipe]
+    permission: eaglergear.recipes
+  cgear:
+    description: Admin command to give or inspect custom gear and health items.
+    usage: /cgear <give|list> [id] [player] [amount]
+permissions:
+  eaglergear.recipes:
+    description: Allows players to open the interactive 3x3 recipe viewer.
+    default: true
+  eaglergear.admin:
+    description: Allows spawning custom gear and health items.
+    default: op

@@ -1,0 +1,12 @@
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/RelicsAndRuinsPlugin.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/commands/RelicsCommand.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/items/CustomItemDefinition.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/items/CustomItemRegistry.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/items/RecipeManager.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/listeners/CombatAndBossListener.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/listeners/EverlastingBakedPotatoListener.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/listeners/PassiveBuffNerfTask.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/listeners/ToolAndInteractListener.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/network/BungeeNotifier.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/structures/StructureGeneratorListener.java
+/workspaces/Eaglercraft-1.21.4-Server/plugins-src/RelicsAndRuins/src/main/java/com/customrealms/relics/structures/VanillaStructureLootListener.java

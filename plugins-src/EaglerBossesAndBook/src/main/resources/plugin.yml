@@ -1,0 +1,26 @@
+name: EaglerBossesAndBook
+version: 1.0.0
+main: com.eagler.bosses.EaglerBossesAndBook
+api-version: '1.21.4'
+softdepend: [EaglerCustomGear, EaglerCustomEnchants]
+description: Physical Artisan Recipe Tome, 4 World Bosses, 4 Elite Mobs, Custom Materials, and Summoning Crystals.
+commands:
+  recipebook:
+    description: Gives you the Artisan's Recipe Tome (usable by all players).
+    usage: /recipebook
+    aliases: [tome, rbook]
+    permission: eaglerbosses.recipebook
+  cboss:
+    description: Admin command to spawn bosses, elite mobs, or give custom boss materials.
+    usage: /cboss <spawn|elite|give|list> [id] [player] [amount]
+  summonboss:
+    description: Summons a boss near the admin running the command.
+    usage: /summonboss <ignis|boreas|malakor|goliath>
+    permission: eaglerbosses.admin
+permissions:
+  eaglerbosses.recipebook:
+    description: Allows any player to claim the Artisan's Recipe Tome.
+    default: true
+  eaglerbosses.admin:
+    description: Allows spawning bosses, elites, and custom materials.
+    default: op

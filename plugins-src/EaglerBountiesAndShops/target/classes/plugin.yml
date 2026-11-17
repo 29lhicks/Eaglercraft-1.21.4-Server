@@ -1,0 +1,20 @@
+name: EaglerBountiesAndShops
+version: 1.0.0
+main: com.eagler.bounties.EaglerBountiesAndShops
+api-version: '1.21.4'
+depend: [DynamicEco, EaglerBossesAndBook, EaglerCustomGear, EaglerCustomEnchants]
+description: Monster/Boss Bounties and an Artisan Black Market Shop linking DynamicEco with Custom Bosses, Gear, and Enchants.
+commands:
+  shop:
+    description: Opens the Artisan Black Market GUI to buy Summoning Crystals, Bandages, and Custom Books.
+    usage: /shop
+    aliases: [blackmarket, bm]
+    permission: eaglerbounties.use
+  bounty:
+    description: View your active monster/boss bounty contract and claim rewards.
+    usage: /bounty [reroll]
+    permission: eaglerbounties.use
+permissions:
+  eaglerbounties.use:
+    description: Allows using /shop and /bounty.
+    default: true

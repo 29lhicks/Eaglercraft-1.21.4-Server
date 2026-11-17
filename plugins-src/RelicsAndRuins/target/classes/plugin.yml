@@ -1,0 +1,13 @@
+name: RelicsAndRuins
+version: 1.0.0
+main: com.customrealms.relics.RelicsAndRuinsPlugin
+api-version: '1.21'
+softdepend: [EaglerBossesAndBook, EaglerCustomGear, EaglerCustomEnchants]
+description: 32 Custom Armor, Weapons, Tools, Off-Hand Artifacts and Special Items with Abilities, Recipes, Custom Boss Drops & Generating World Structures (1.21.4 + BungeeCord)
+commands:
+  relics:
+    description: List custom relics or, as an admin, give relics and place structures
+    usage: /relics <give|structure|list> [args]
+permissions:
+  relics.admin:
+    default: op

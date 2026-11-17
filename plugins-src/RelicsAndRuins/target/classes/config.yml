@@ -1,0 +1,7 @@
+# RelicsAndRuins 1.21.4 + BungeeCord Configuration
+bungeecord-announcements: true
+boss-drop-chance: 0.65
+enable-custom-structures: true
+structure-chunk-rarity: 95
+nether-structure-chunk-rarity: 95
+end-structure-chunk-rarity: 95

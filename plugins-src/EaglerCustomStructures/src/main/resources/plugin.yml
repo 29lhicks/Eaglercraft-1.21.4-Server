@@ -1,0 +1,14 @@
+name: EaglerCustomStructures
+version: 1.0.0
+main: com.eagler.structures.EaglerCustomStructures
+api-version: '1.21.4'
+softdepend: [EaglerCustomEnchants, EaglerCustomGear, RelicsAndRuins]
+description: Generates small natural structures with custom gear, enchantments, and vanilla loot.
+commands:
+  cstruct:
+    description: Spawn or inspect custom structures.
+    usage: /cstruct <spawn|list> [structure_type]
+permissions:
+  eaglerstructures.admin:
+    description: Allows spawning custom structures manually.
+    default: op

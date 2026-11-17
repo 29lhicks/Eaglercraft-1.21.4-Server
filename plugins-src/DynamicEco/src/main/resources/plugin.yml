@@ -1,0 +1,19 @@
+name: DynamicEco
+version: 1.0.0
+main: com.eagler.dynamiceco.DynamicEco
+api-version: '1.21.4'
+description: A standalone supply-and-demand economy with a configurable market.
+commands:
+  bal:
+    description: Check your balance or an online player's balance.
+    usage: /bal [player]
+  pay:
+    description: Send money to another online player.
+    usage: /pay <player> <amount>
+  market:
+    description: Check prices or buy and sell market items.
+    usage: /market <price|buy|sell> <item|hand> [amount]
+permissions:
+  dynamiceco.balance.others:
+    description: View other players' balances.
+    default: op

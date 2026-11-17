@@ -1,0 +1,6 @@
+max-homes: 4
+rtp:
+  max-radius: 500
+  cooldown-seconds: 600
+tpa:
+  expiry-seconds: 60

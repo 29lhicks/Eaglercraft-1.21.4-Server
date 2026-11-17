@@ -1,0 +1,45 @@
+name: EaglerTravel
+version: 1.0.0
+main: com.eagler.travel.EaglerTravel
+api-version: '1.21'
+description: Homes, player teleport requests, and safe random Overworld teleport.
+commands:
+  rtp:
+    description: Teleport to a random safe location in the Overworld.
+    usage: /rtp
+    permission: eaglertravel.rtp
+  sethome:
+    description: Save a home at your current location.
+    usage: /sethome [name]
+    permission: eaglertravel.home
+  home:
+    description: Teleport to one of your saved homes.
+    usage: /home [name]
+    permission: eaglertravel.home
+  delhome:
+    description: Delete one of your saved homes.
+    usage: /delhome [name]
+    permission: eaglertravel.home
+  homes:
+    description: List your saved homes.
+    usage: /homes
+    permission: eaglertravel.home
+  tpa:
+    description: Request to teleport to another player.
+    usage: /tpa <player>
+    permission: eaglertravel.tpa
+  tpaccept:
+    description: Accept a pending teleport request.
+    usage: /tpaccept
+    permission: eaglertravel.tpa
+  tpdeny:
+    description: Deny a pending teleport request.
+    usage: /tpdeny
+    permission: eaglertravel.tpa
+permissions:
+  eaglertravel.rtp:
+    default: true
+  eaglertravel.home:
+    default: true
+  eaglertravel.tpa:
+    default: true

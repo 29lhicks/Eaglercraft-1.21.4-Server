@@ -13,6 +13,6 @@ Eaglercraft 1.21.4 Server by Ryan Norshare !
 <br>
 <br>
 **Step 5 (Optional):** to add plugins go to server>plugins and upload them there and then restart your server with `stop` then `sudo java -jar server.jar`  
-<br>
-<br>
+
+
 Note: Remember this server is free and so it is not going to be online 24/7 or lag free so i recommend installing the plugin "Clear Lag" which automatically clears entitys

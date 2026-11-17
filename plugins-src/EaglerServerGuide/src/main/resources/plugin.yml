@@ -1,0 +1,24 @@
+name: EaglerServerGuide
+version: 1.0.0
+main: com.eagler.guide.EaglerServerGuide
+api-version: '1.21.4'
+softdepend:
+  - RelicsAndRuins
+  - EaglerCustomGear
+  - EaglerBossesAndBook
+  - EaglerCustomEnchants
+  - EaglerCustomStructures
+  - DynamicEco
+  - EaglerSkillTree
+  - EaglerBountiesAndShops
+description: Interactive guide to the server's plugins, items, bosses, enchants, structures, economy, skills, and bounties.
+commands:
+  guide:
+    description: Opens the interactive server guide or searches for a topic.
+    usage: /guide [question or keyword]
+    aliases: [ai, helpguide, wiki, serverinfo]
+    permission: eagler.guide
+permissions:
+  eagler.guide:
+    description: Allows players to use the server guide.
+    default: true

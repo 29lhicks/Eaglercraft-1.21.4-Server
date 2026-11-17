@@ -1,0 +1,13 @@
+name: EaglerCustomEnchants
+version: 1.0.0
+main: com.eagler.enchants.EaglerCustomEnchants
+api-version: '1.21.4'
+description: 50 balanced custom enchantments with natural chest loot, librarian villager trades, enchanting table rolls, and anvil support.
+commands:
+  ce:
+    description: Admin command to give custom enchanted books or apply enchantments.
+    usage: /ce <give|apply|list> [player] [enchant] [level]
+permissions:
+  eaglerenchants.admin:
+    description: Allows giving and applying custom enchantments.
+    default: op
